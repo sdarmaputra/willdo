@@ -2,6 +2,21 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
 export default class Splash extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			timer: null
+		};
+	}
+
+	componentDidMount() {
+		let timer = setTimeout(() => {
+			clearTimeout(this.state.timer);
+			this.props.navigation.navigate('Todos');
+		}, 3000);
+		this.setState({ timer })
+	}
+
 	render() {
 		return (
 			<View style={styles.wrapper}>
