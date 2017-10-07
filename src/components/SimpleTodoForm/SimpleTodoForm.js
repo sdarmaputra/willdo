@@ -34,8 +34,10 @@ export default class SimpleTodoForm extends React.Component {
 
 const styles = {
 	wrapper: {
-		backgroundColor: '#eee',
-		marginBottom: 20
+		padding: 15,
+		backgroundColor: '#fff',
+		borderColor: '#eee',
+		borderBottomWidth: 1
 	}, 
 	input: { 
 		color: '#888',
